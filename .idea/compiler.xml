@@ -10,5 +10,6 @@
         <module name="communication-s-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

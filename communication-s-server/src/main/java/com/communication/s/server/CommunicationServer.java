@@ -1,5 +1,7 @@
 package com.communication.s.server;
 
+import com.communication.s.pool.CommunicationThreadPool;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -23,6 +25,7 @@ public class CommunicationServer {
         while (true) {
             Socket socket = serverSocket.accept();
             System.out.println(socket.getInetAddress() + ":" + socket.getPort() + " 绑定成功");
+            CommunicationThreadPool.acceptCommunication(socket);
         }
     }
 }
