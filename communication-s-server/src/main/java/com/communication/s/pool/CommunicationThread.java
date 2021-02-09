@@ -27,6 +27,9 @@ public class CommunicationThread implements Runnable {
                 String str = new String(cacheByte);
                 System.out.println(str);
             } while (cacheLength != -1);
+
+            OutputStream outputStream = socket.getOutputStream();
+            outputStream.write(("我接受到了你的消息 " + socket.getPort()).getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
