@@ -11,6 +11,7 @@
     <modules>
         <module>communication-s-client</module>
         <module>communication-s-server</module>
+        <module>communication-s-nio</module>
     </modules>
 
 

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="communication-s-client" />
+        <module name="communication-s-nio" />
         <module name="communication-s-server" />
       </profile>
     </annotationProcessing>
