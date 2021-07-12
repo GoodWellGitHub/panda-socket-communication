@@ -37,11 +37,11 @@ public class ChannelDemo {
             int bytes = fileChannel.read(byteBuffer);
             while (bytes != -1) {
                 System.out.println("readSize=" + bytes);
-                byteBuffer.flip();
+                byteBuffer.flip();//将byteBuffer从写切换到读模式
                 while (byteBuffer.hasRemaining()) {
                     System.out.print((char) byteBuffer.get());
                 }
-                byteBuffer.clear();
+                byteBuffer.clear();//clear()方法会清空整个缓冲区  compact()方法只会清除已经读过的数据
                 bytes = fileChannel.read(byteBuffer);
             }
             accessFile.close();
